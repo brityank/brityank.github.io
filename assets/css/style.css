@@ -6,11 +6,29 @@ main {
   border: 1px solid black;
 } */
 
+@media (min-width: 900px) {
+  .wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding-bottom: 70px;
+  }
+}
+
+@media (max-width: 900px) {
+  .wrapper {
+    display: grid;
+    grid-template-columns: 1fr;
+    padding-bottom: 70px;
+  }
+}
+
 body {
   margin: 0;
   padding: 0;
-  background: #ababab;
-  color: #4aaaa4;
+  background-color: #4aaaa5;
+  background-image: url("../images/interlaced.png");
+  color: #777777;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 header {
@@ -27,6 +45,7 @@ header {
 h3 {
   font-size: 20px;
   padding: 20px;
+  font-family: Georgia, "Times New Roman", Times, serif;
 }
 
 hr {
@@ -48,21 +67,22 @@ a {
 }
 
 footer {
+  width: 100%;
+  position: fixed;
+  bottom: 0px;
   text-align: center;
   background: #666;
   padding: 11px;
+  color: #fff;
 }
 
 figure {
   /* float: left; */
-  padding: 20px;
-  margin: 20px;
   /* position: relative;
   left: 3%; */
   font-size: larger;
   text-align: center;
   font-style: italic;
-  padding: 5px;
 }
 
 form {
@@ -93,9 +113,23 @@ textarea {
   height: 60px;
 }
 
-.wrapper {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+li a:hover {
+  animation: blink-down 0.5s ease-in;
+}
+
+@keyframes blink-down {
+  0% {
+    padding-bottom: 1px;
+    border-bottom: 0px solid #fff;
+  }
+  50% {
+    border-bottom: 3px solid #4aaaa4;
+    padding-bottom: 4px;
+  }
+  100% {
+    padding-bottom: 1px;
+    border-bottom: 0px solid #fff;
+  }
 }
 
 .active-page,
@@ -156,7 +190,24 @@ main > h3 {
   float: left;
   padding: 20px;
   margin: 20px;
-  border: 0.5px solid #4aaaa4;
+  border: 0.5px solid #4aaaa5;
+  border-radius: 10%;
+}
+
+#prof-pic:hover {
+  animation: border-grow 2s ease;
+}
+
+@keyframes border-grow {
+  0% {
+    border: 0.5px solid #4aaaa5;
+  }
+  50% {
+    border: 10px solid #4aaaa5;
+  }
+  100% {
+    border: 0.5px solid #4aaaa5;
+  }
 }
 
 .centered {
