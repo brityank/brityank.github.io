@@ -6,6 +6,8 @@ main {
   border: 1px solid black;
 } */
 
+/* Media Queries */
+
 @media (min-width: 900px) {
   .wrapper {
     display: grid;
@@ -22,6 +24,8 @@ main {
   }
 }
 
+/* Main Structure  */
+
 body {
   margin: 0;
   padding: 0;
@@ -36,11 +40,6 @@ header {
   background-color: #ffffff;
   margin: 0 auto;
 }
-
-/* header,header * {
-  position: fixed;
-  top: 0px;
-} */
 
 h3 {
   font-size: 20px;
@@ -77,9 +76,6 @@ footer {
 }
 
 figure {
-  /* float: left; */
-  /* position: relative;
-  left: 3%; */
   font-size: larger;
   text-align: center;
   font-style: italic;
@@ -113,6 +109,8 @@ textarea {
   height: 60px;
 }
 
+/* Pseudo Styles */
+
 li a:hover {
   animation: blink-down 0.5s ease-in;
 }
@@ -142,6 +140,20 @@ input:focus,
 textarea:focus {
   border-color: #fff;
 }
+
+@keyframes border-grow {
+  0% {
+    border: 0.5px solid #4aaaa5;
+  }
+  50% {
+    border: 10px solid #4aaaa5;
+  }
+  100% {
+    border: 0.5px solid #4aaaa5;
+  }
+}
+
+/* Specific Items */
 
 .button {
   padding-left: 90px;
@@ -198,26 +210,10 @@ main > h3 {
   animation: border-grow 2s ease;
 }
 
-@keyframes border-grow {
-  0% {
-    border: 0.5px solid #4aaaa5;
-  }
-  50% {
-    border: 10px solid #4aaaa5;
-  }
-  100% {
-    border: 0.5px solid #4aaaa5;
-  }
-}
-
 .centered {
   grid-column: 1 / -1;
   justify-self: center;
 }
-
-/* .border-right {
-  border-right: 1px solid #5fdbd3;
-} */
 
 .clearfix::after {
   content: " ";
